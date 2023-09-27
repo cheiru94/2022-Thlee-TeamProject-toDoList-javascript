@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+<!-- 전체 링크  -->
+  <!-- 폰트 -->
+    <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis .com/css2?family=Lilita+One&family=Rubik+Bubbles&display=swap' /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!-- 스타일 초기화  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <!-- 스타일 링크 - main_1 -->
+  <link rel="stylesheet" href="/style/login.css">
+
+  <script defer src="/js/login.js"></script>
+
+</head>
+<body>
+
+
+  <!-- 전체 container -->
+  <div class="container">
+    
+    <!-- 1. header (15) -->
+      <div class="header">
+
+          <!-- 1.1 좌측 상단 back 탭  -->
+          <div class="tab_back">
+          <a href="/">Back</a>   
+          </div>
+
+          <!-- 1.2 우측 상단 Create Account 탭  -->
+          <div class="tab_createAccount">
+            <a href="/register" >Create Account</a>
+          </div>
+
+      </div>
+
+
+    <!-- 2. title (30) -->
+      <div class="title">
+        Log-in
+        <!-- <div class="subject">Log-in</div> -->
+      </div>
+      
+    <!-- 3. log-in (40) -->
+      <div class="accountBox">
+
+        <div class="box">
+          <!-- 3.1 아이디  -->
+          <div class="ID">
+            <input type="text"  placeholder="Account" class="account" autofocus required> 
+          </div>
+
+          <!-- 3.2 비밀번호  -->
+          <div class="PW">  
+            <input type="password" placeholder="Password" class="password" >  
+          </div>
+
+        </div>
+
+      </div>
+
+    <!-- 4. footer (15) -->
+      <div class="footer">
+        <div class="validNoti" ></div>
+        <div class="sign_in">
+          <button id="btnSignin">Sign in</button>
+        </div>
+      </div>
+
+
+  </div>
+
+ 
+</body>
+</html>

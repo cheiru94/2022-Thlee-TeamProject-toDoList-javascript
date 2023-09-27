@@ -1,0 +1,38 @@
+# Docker Compose settings
+version: '3.8'
+services:
+  app:
+    image: node:alpine
+    container_name: "node"
+    restart: always
+
+    build: ./app
+
+    ports:
+      - "18080:18080"
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+    command: yarn start
+  nginx:
+    image: nginx:stable-alpine
+    container_name: "nginx"
+
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+  db:
+    image: mariadb:10
+    container_name: "mariadb"
+
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mariadb:/var/lib/mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: password 
+    restart: always

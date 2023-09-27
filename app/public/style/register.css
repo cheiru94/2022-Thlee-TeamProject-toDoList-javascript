@@ -1,0 +1,275 @@
+@keyframes pan {
+  100% {background-position: 15% 50%;}
+}
+/* 수정함 , 1월18일 8시 48분 */
+body {
+  background-image:url(/image/bg1.svg);
+  background-repeat: no-repeat;
+  background-size:cover ;
+  animation: pan 6s infinite alternate linear;  
+  place-items: center;
+  font-family: "Shadows Into Light"
+  }
+  
+/*   전체 container   */
+.container  {
+  width:100vw;
+  height: 100vh ;
+  font-family: "Shadows Into Light"
+}
+
+
+
+  /** 1 header ( 15% ) **/
+    .container .header {
+          
+        height: 10vh ;
+        /* background-color: royalblue; */
+        display: flex;
+        justify-content: center ;
+        position: relative;
+        
+      } 
+      
+          a {
+              text-decoration: none;
+              color: #26dfae ;
+              display: block;
+            }
+
+
+          /* 1.1 좌측 상단 back 탭 */
+          .container .header .tab_back {
+            width: 150px;
+            height: 45px;
+            font-size: 2em;
+            border: 6px solid #26dfae ;
+            position:absolute ;
+            top: 30px;  
+            left: 50px;
+            text-align: center;
+            line-height: 45px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px ;
+    
+            }
+
+            .container .header .tab_back:hover {
+              transition: 0.5s;
+              color: #26dfae;
+              box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 #26dfae;
+              animation-name: yureru;
+              animation-duration: 1s;
+              animation-iteration-count: infinite;
+            }
+
+
+          
+            /* 1.2 중앙 Create Account  */
+            .container .header .create_account {
+              font-size: 5em;
+              text-align: center;
+              line-height: 300px;
+              color: pink ;
+              text-shadow: 0 0 15px pink, 0 0 25px  rgb(135, 42, 228);
+              animation: animate 2s linear infinite;
+            }
+
+
+                  @keyframes animate {
+                    0% {
+                      filter:hue-rotate(0deg)
+                    }
+                    40% {
+                      filter: hue-rotate(30deg);
+                    }
+                  }
+
+/* ******************************************************** */                
+
+  /* 2 중간 center  ( 75vw ) */
+  .container .center {
+    /* height: 65vh ; */
+    height: 70vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+  }
+
+      /* 2.1 create account 박스 사이즈 */
+        .container .center .account_box {
+          top: 50px;
+          width: 800px;
+          height: 370px;
+          background-color: #fff;
+          opacity: 0.61;
+          border: 13px solid #26dfae ;
+          border-radius: 80px;
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          position: relative;
+          
+        } 
+        .container .center .account_box:hover {
+              transition: .5s;
+              color: #26dfae;
+              box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 15px 35px 0 #26dfae;
+            }
+
+      /* 2.2 내부 요소들 */
+        .container .center .account_box .elements {
+          display: flex;
+          position: absolute;
+          top: 25px;
+        }
+
+        .container .center .account_box .elements .validNoti {
+          display: none;
+          color: rgb(233, 150, 164);
+          text-shadow: 0 0 15px rgb(239, 255, 192), 0 0 25px  #9A86FD;
+          font-size: 25px;
+          font-weight: 800;
+          bottom: -65px;
+          right: 150px;
+          position: absolute;
+          margin: 0 auto;
+        }
+        .container .center .account_box .elements .validNoti.err { 
+          display: block;
+          transition: 2s;
+          animation-name: damedame;
+          animation-duration: 1.5s;
+          animation-iteration-count : 1.3;
+        }
+        @keyframes damedame {
+          0% {
+            transform: translateX(10px);
+          }
+          10% {
+            transform: translateX(-10px);
+          }
+          20% {
+            transform: translateX(10px);
+          }
+          30% {
+            transform: translateX(-10px);
+          }
+          40% {
+            transform: translateX(10px);
+          }
+          50% {
+            transform: translateX(-10px);
+          }
+          60% {
+            transform: translateX(10px);
+          }
+          70% {
+            transform: translateX(-10px);
+          }
+          80% {
+            transform: translateX(10px);
+          }
+          90% {
+            transform: translateX(-10px);
+          }
+          100% {
+            transform: translateX(10px);
+          }
+         }
+
+
+
+      /* 2.3 요소들 세부 사항 */
+        .container .center .account_box .elements .element { 
+          width: 700px;
+          height: 100px;
+          margin-bottom: 15px;
+        }
+
+      /* 2.4 입력란 상위  네임 tag  */
+        .container .center .account_box .elements .element .nameTag{
+          width: 700px;
+          height: 30px;
+          font-size: 1em;
+          font-weight: bolder;
+          color: #26dfae;
+          background-color: rgb(26, 25, 102);
+          
+          text-align: center;
+          border-radius: 10px;
+        }
+
+
+          /* type 요소  */
+            [type] {
+              width: 700px;
+              height: 40px;
+              border-radius: 20px  ;
+              text-align: center;
+              align-items:center ;
+              padding-bottom: 10px;
+              font-size: 40px;
+              
+            }
+
+        .footer {
+          height: 20%;
+          width: 100%;
+          display: flex;
+          justify-content:center ;
+        }
+
+      /* 2.5 create 버튼 */
+         #button {
+          width: 250px;
+          height: 60px;
+          color: #26dfae;
+          border: 6px solid #26dfae ;
+          text-align: center;
+          line-height: 45px;
+          font-size: 2em;
+          border-radius: 10px;
+          
+          background-color: transparent;
+          font-family: "Shadows Into Light";
+          }
+
+        
+          #button:hover {
+            transition: 0.5s;
+            color: #26dfae;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 #26dfae;
+            animation-name: yureru;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+          }
+
+        
+        @keyframes yureru {
+          0% {
+            transform: rotate(5deg);
+          }
+          20% {
+            transform: rotate(-5deg);
+          }
+          40% {
+            transform: rotate(5deg);
+          }
+          60% {
+            transform: rotate(-5deg);
+          }
+          80% {
+            transform: rotate(5deg);
+          }
+          100% {
+            transform: rotate(-5deg);
+          }
+         }
+          
+/* ******************************************************** */                
+
+
+

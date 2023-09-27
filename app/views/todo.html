@@ -1,0 +1,82 @@
+<!-- Sign in -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo</title>
+
+  <!-- 전체 링크  -->
+  <!-- 폰트 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" />
+
+  <!-- 스타일 초기화  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <!-- 스타일 링크 - main_1 -->
+  <link rel="stylesheet" href="/style/todo.css">
+  <script defer src="/js/todo.js"></script>
+
+</head>
+
+<body>
+<!-- HEADER !!-->
+  <!-- 전체 container -->
+  <div class="container">
+
+    <!-- 1. header (15) -->
+    <div class="header">
+
+      <!-- 1.1 좌측 상단 back 탭  -->
+      <div class="tab_back">
+        <a href="/">Back</a>
+      </div>
+
+      <!-- 1.2 우측 상단 log out 탭  -->
+      <div class="tab_logOut">
+        <a href="/api/auth/logout">Log out</a>
+      </div>
+
+    </div>
+
+
+
+    <!-- 2. title -->
+    <div class="title">
+
+      <!-- 2.1 제목 to do list -->
+      <div class="subject">
+        To-do list
+      </div>
+
+
+    </div>
+
+    <!-- 3 리스트 생성 박스  -->
+    <div class="buttonbox">
+      <input type="button" value="+ New task" id="addTask">
+    </div>
+
+    <!-- 4. list -->
+    <div class="list">
+
+      <!-- 4.1 리스트 목록 범위 지정  -->
+      <div class="todo-list">
+        <!-- 4.2 요소 1 -->
+        <!-- <div class="task">
+          <label class="labelCompleted">
+            <input type="checkbox" class="completed">
+          </label>
+          <input type="text" placeholder="包み込むように...." id="body">
+          <input type="button" value="x" class="delete">
+        </div> -->
+      </div>
+
+    </div>
+
+
+  </div>
+
+</body>
+
+</html>
